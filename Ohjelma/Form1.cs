@@ -16,8 +16,6 @@ namespace Ohjelma
         public Form1()
         {
             InitializeComponent();
-            ///pöö
-            /////pöö
         }
 
 
@@ -200,22 +198,21 @@ namespace Ohjelma
 
         private void EtuValikko_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int P = 15;
-            int T = 12;
-            int G = 9;
-            int M = 6;
-            int k = 3;
-            int h = 2;
-            int da = 1;
-            int d = -1;
-            int c = -2;
-            int m = -3;
-            int μ = -6;
-            int n = -9;
-            int p = -12;
-            int f = -15;
+            int Peta = 15;
+            int Tera = 12;
+            int Giga = 9;
+            int Mega = 6;
+            int kilo = 3;
+            int hehto = 2;
+            int deka = 1;
+            int desi = -1;
+            int sentti = -2;
+            int milli = -3;
+            int mikro = -6;
+            int nano = -9;
+            int piko = -12;
+            int femto = -15;
             
-            //pöö
 
         }
 
@@ -226,37 +223,69 @@ namespace Ohjelma
         }
 
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void Laatikko_TextChanged(object sender, EventArgs e)
         {
-            int P = 15;
-            int T = 12;
-            int G = 9;
-            int M = 6;
-            int k = 3;
-            int h = 2;
-            int da = 1;
-            int d = -1;
-            int c = -2;
-            int m = -3;
-            int μ = -6;
-            int n = -9;
-            int p = -12;
-            int f = -15;
 
-            double arvo = double.Parse(textBox2.Text);
+            int[] potenssi = new int[14];
+            Taulukoi(potenssi);
+            string[] merkit = new string[14];
+            merkitse(merkit);
+
+            double arvo = double.Parse(Laatikko.Text);
+
+    //        if(arvoMetri.Equals(merkit(i))
+     //       String Etu = EtuValikko.Text;
 
             int i = 0;
 
-            double arvoMuutettu = Math.Pow(10, i);
+
+            double arvoMetri = Math.Pow(10, i);
 
 
-            //      double M = EtuValikko.Text;
+            Muunnos.Text = arvoMetri + "";
 
-            //   double arvoM = Math.Pow(10, M);
+        }
 
 
-            Muunnos.Text = arvoMuutettu + "";
+        private void Taulukoi(int[] taulukko)
+        {
+            int i = 0;
+            taulukko[i] = 15; i++;
+            taulukko[i] = 12; i++;
+            taulukko[i] = 9; i++;
+            taulukko[i] = 6; i++;
+            taulukko[i] = 3; i++;
+            taulukko[i] = 2; i++;
+            taulukko[i] = 1; i++;
+            taulukko[i] = -1; i++;
+            taulukko[i] = -2; i++;
+            taulukko[i] = -3; i++;
+            taulukko[i] = -6; i++;
+            taulukko[i] = -9; i++;
+            taulukko[i] = -12; i++;
+            taulukko[i] = -15;
+            return;
+        }
 
+
+        private void merkitse(string[] merkit)
+        {
+            int i = 0;
+            merkit[i] = "Peta"; i++;
+            merkit[i] = "Tera"; i++;
+            merkit[i] = "Giga"; i++;
+            merkit[i] = "Mega"; i++;
+            merkit[i] = "kilo"; i++;
+            merkit[i] = "hehto"; i++;
+            merkit[i] = "deka"; i++;
+            merkit[i] = "desi"; i++;
+            merkit[i] = "sentti"; i++;
+            merkit[i] = "milli"; i++;
+            merkit[i] = "mikro"; i++;
+            merkit[i] = "nano"; i++;
+            merkit[i] = "piko"; i++;
+            merkit[i] = "femto";
+            return;
         }
 
 

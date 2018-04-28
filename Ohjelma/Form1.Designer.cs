@@ -48,7 +48,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.Muunnos = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Laatikko = new System.Windows.Forms.TextBox();
             this.EtuValikkoVastaus = new System.Windows.Forms.ComboBox();
             this.Valikko = new System.Windows.Forms.ComboBox();
             this.EtuValikko = new System.Windows.Forms.ComboBox();
@@ -253,7 +253,7 @@
             this.Muunnoksia.Controls.Add(this.textBox4);
             this.Muunnoksia.Controls.Add(this.label10);
             this.Muunnoksia.Controls.Add(this.Muunnos);
-            this.Muunnoksia.Controls.Add(this.textBox2);
+            this.Muunnoksia.Controls.Add(this.Laatikko);
             this.Muunnoksia.Controls.Add(this.EtuValikkoVastaus);
             this.Muunnoksia.Controls.Add(this.Valikko);
             this.Muunnoksia.Controls.Add(this.EtuValikko);
@@ -319,15 +319,14 @@
             this.Muunnos.ReadOnly = true;
             this.Muunnos.Size = new System.Drawing.Size(139, 20);
             this.Muunnos.TabIndex = 25;
-  //          this.Muunnos.TextChanged += new System.EventHandler(this.Muunnos_TextChanged);
             // 
-            // textBox2
+            // Laatikko
             // 
-            this.textBox2.Location = new System.Drawing.Point(16, 313);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 20);
-            this.textBox2.TabIndex = 24;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.Laatikko.Location = new System.Drawing.Point(16, 313);
+            this.Laatikko.Name = "Laatikko";
+            this.Laatikko.Size = new System.Drawing.Size(136, 20);
+            this.Laatikko.TabIndex = 24;
+            this.Laatikko.TextChanged += new System.EventHandler(this.Laatikko_TextChanged);
             // 
             // EtuValikkoVastaus
             // 
@@ -375,19 +374,19 @@
             this.EtuValikko.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.EtuValikko.Items.AddRange(new object[] {
             "Peta",
-            "Tera T",
-            "Giga G",
-            "Mega M",
-            "Kilo k",
-            "hehto h",
-            "deka da",
-            "desi d",
-            "sentti c",
-            "milli m",
-            "mikro μ",
-            "nano n",
-            "piko p",
-            "femto f"});
+            "Tera",
+            "Giga",
+            "Mega",
+            "Kilo",
+            "hehto",
+            "deka",
+            "desi",
+            "sentti",
+            "milli",
+            "mikro",
+            "nano",
+            "piko",
+            "femto"});
             this.EtuValikko.Location = new System.Drawing.Point(16, 285);
             this.EtuValikko.Name = "EtuValikko";
             this.EtuValikko.Size = new System.Drawing.Size(67, 21);
@@ -437,6 +436,7 @@
             this.LaatikkoM2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.LaatikkoM2.Location = new System.Drawing.Point(180, 205);
             this.LaatikkoM2.Name = "LaatikkoM2";
+            this.LaatikkoM2.ReadOnly = true;
             this.LaatikkoM2.Size = new System.Drawing.Size(100, 20);
             this.LaatikkoM2.TabIndex = 15;
             this.LaatikkoM2.Tag = "LaatikkoM2";
@@ -492,6 +492,7 @@
             this.LaatikkoMM.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.LaatikkoMM.Location = new System.Drawing.Point(180, 116);
             this.LaatikkoMM.Name = "LaatikkoMM";
+            this.LaatikkoMM.ReadOnly = true;
             this.LaatikkoMM.Size = new System.Drawing.Size(100, 20);
             this.LaatikkoMM.TabIndex = 8;
             this.LaatikkoMM.Tag = "LaatikkoMM";
@@ -626,7 +627,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox Muunnos;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Laatikko;
         private System.Windows.Forms.ComboBox EtuValikkoVastaus;
         private System.Windows.Forms.ComboBox Valikko;
         private System.Windows.Forms.ComboBox EtuValikko;
