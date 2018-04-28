@@ -215,7 +215,7 @@ namespace Ohjelma
             int p = -12;
             int f = -15;
             
-
+            //pöö
 
         }
 
