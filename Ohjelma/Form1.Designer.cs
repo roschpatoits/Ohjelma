@@ -333,25 +333,31 @@
             this.EtuValikkoVastaus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.EtuValikkoVastaus.FormattingEnabled = true;
             this.EtuValikkoVastaus.Items.AddRange(new object[] {
-            "Peta P",
-            "Tera T",
-            "Giga G",
-            "Mega M",
-            "Kilo k",
-            "hehto h",
-            "deka da",
-            "desi d",
-            "sentti c",
-            "milli m",
-            "mikro μ",
-            "nano n",
-            "piko p",
-            "femto f"});
+            "Peta",
+            "Tera",
+            "Giga",
+            "Mega",
+            "Kilo",
+            "hehto",
+            "deka",
+            "desi",
+            "sentti",
+            "milli",
+            "mikro",
+            "nano",
+            "piko",
+            "femto"});
             this.EtuValikkoVastaus.Location = new System.Drawing.Point(209, 285);
             this.EtuValikkoVastaus.Name = "EtuValikkoVastaus";
             this.EtuValikkoVastaus.Size = new System.Drawing.Size(71, 21);
             this.EtuValikkoVastaus.TabIndex = 22;
             this.EtuValikkoVastaus.Tag = "EtuValikkoVastaus";
+            this.EtuValikkoVastaus.SelectedIndexChanged += new System.EventHandler(this.EtuValikkoVastaus_Changed);
+            this.EtuValikkoVastaus.SelectionChangeCommitted += new System.EventHandler(this.EtuValikkoVastaus_ChangeChanged);
+            this.EtuValikkoVastaus.TextUpdate += new System.EventHandler(this.EtuValikkoVastaus3);
+            this.EtuValikkoVastaus.SelectedValueChanged += new System.EventHandler(this.EtuValikkoVastaus_ValueChanged);
+            this.EtuValikkoVastaus.TabIndexChanged += new System.EventHandler(this.EtuValikkoVastaus1);
+            this.EtuValikkoVastaus.TextChanged += new System.EventHandler(this.EtuValikkoVastaus2);
             // 
             // Valikko
             // 
@@ -370,6 +376,7 @@
             // EtuValikko
             // 
             this.EtuValikko.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.EtuValikko.Enabled = false;
             this.EtuValikko.FormattingEnabled = true;
             this.EtuValikko.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.EtuValikko.Items.AddRange(new object[] {

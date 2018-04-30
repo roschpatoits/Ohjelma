@@ -198,7 +198,7 @@ namespace Ohjelma
 
         private void EtuValikko_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int Peta = 15;
+   /*         int Peta = 15;
             int Tera = 12;
             int Giga = 9;
             int Mega = 6;
@@ -212,7 +212,7 @@ namespace Ohjelma
             int nano = -9;
             int piko = -12;
             int femto = -15;
-            
+    */        
 
         }
 
@@ -225,24 +225,34 @@ namespace Ohjelma
 
         private void Laatikko_TextChanged(object sender, EventArgs e)
         {
+            if(Muunnos.Modified == true)
+            {
+                Refresh();
+            }
+
 
             int[] potenssi = new int[14];
             Taulukoi(potenssi);
             string[] merkit = new string[14];
-            merkitse(merkit);
+            Merkitse(merkit);
 
             double arvo = double.Parse(Laatikko.Text);
 
-    //        if(arvoMetri.Equals(merkit(i))
-     //       String Etu = EtuValikko.Text;
+            int a = 0;
 
-            int i = 0;
+            for(int i = 0; i < potenssi.Length; i++)
+            {
+                if (EtuValikkoVastaus.Text.Equals(merkit[i]))
+                {
+                    a = potenssi[i];
+                    break;
+                }
+            }
 
-
-            double arvoMetri = Math.Pow(10, i);
-
+            double arvoMetri = arvo * Math.Pow(10, a);
 
             Muunnos.Text = arvoMetri + "";
+
 
         }
 
@@ -268,7 +278,7 @@ namespace Ohjelma
         }
 
 
-        private void merkitse(string[] merkit)
+        private void Merkitse(string[] merkit)
         {
             int i = 0;
             merkit[i] = "Peta"; i++;
