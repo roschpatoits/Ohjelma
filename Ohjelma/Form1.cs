@@ -249,7 +249,7 @@ namespace Ohjelma
                 }
             }
 
-            double arvoMetri = arvo * Math.Pow(10, a);
+            double arvoMetri = arvo * Math.Pow(10, (-1 * a));
 
             Muunnos.Text = arvoMetri + "";
 
