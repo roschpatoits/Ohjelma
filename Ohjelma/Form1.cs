@@ -220,6 +220,7 @@ namespace Ohjelma
         private void Valikko_SelectedIndexChanged(object sender, EventArgs e)
         {
             VastausLaatikko.Text = Valikko.Text;
+            Valikko.SelectedText = "Metri";
         }
 
 
@@ -252,7 +253,6 @@ namespace Ohjelma
             double arvoMetri = arvo * Math.Pow(10, (-1 * a));
 
             Muunnos.Text = arvoMetri + "";
-
 
         }
 

@@ -352,15 +352,10 @@
             this.EtuValikkoVastaus.Size = new System.Drawing.Size(71, 21);
             this.EtuValikkoVastaus.TabIndex = 22;
             this.EtuValikkoVastaus.Tag = "EtuValikkoVastaus";
-/*            this.EtuValikkoVastaus.SelectedIndexChanged += new System.EventHandler(this.EtuValikkoVastaus_Changed);
-            this.EtuValikkoVastaus.SelectionChangeCommitted += new System.EventHandler(this.EtuValikkoVastaus_ChangeChanged);
-            this.EtuValikkoVastaus.TextUpdate += new System.EventHandler(this.EtuValikkoVastaus3);
-            this.EtuValikkoVastaus.SelectedValueChanged += new System.EventHandler(this.EtuValikkoVastaus_ValueChanged);
-            this.EtuValikkoVastaus.TabIndexChanged += new System.EventHandler(this.EtuValikkoVastaus1);
-            this.EtuValikkoVastaus.TextChanged += new System.EventHandler(this.EtuValikkoVastaus2);
- */         // 
+            // 
             // Valikko
             // 
+            this.Valikko.DisplayMember = "Metri";
             this.Valikko.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Valikko.FormattingEnabled = true;
             this.Valikko.Items.AddRange(new object[] {
