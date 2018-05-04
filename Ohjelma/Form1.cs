@@ -226,11 +226,6 @@ namespace Ohjelma
 
         private void Laatikko_TextChanged(object sender, EventArgs e)
         {
-            if(Muunnos.Modified == true)
-            {
-                Refresh();
-            }
-
 
             int[] potenssi = new int[14];
             Taulukoi(potenssi);
@@ -240,6 +235,12 @@ namespace Ohjelma
             double arvo = double.Parse(Laatikko.Text);
 
             int a = 0;
+
+            if (Muunnos.Modified == true)
+            {
+                Refresh();
+            }
+
 
             for(int i = 0; i < potenssi.Length; i++)
             {
@@ -296,6 +297,13 @@ namespace Ohjelma
             merkit[i] = "piko"; i++;
             merkit[i] = "femto";
             return;
+        }
+
+
+        private void EtuValikkoVastaus_Vaihto(object sender, EventArgs e)
+        {
+            
+
         }
 
 

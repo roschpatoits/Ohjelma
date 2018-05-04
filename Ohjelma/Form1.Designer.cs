@@ -352,6 +352,8 @@
             this.EtuValikkoVastaus.Size = new System.Drawing.Size(71, 21);
             this.EtuValikkoVastaus.TabIndex = 22;
             this.EtuValikkoVastaus.Tag = "EtuValikkoVastaus";
+      //      this.EtuValikkoVastaus.SelectedIndexChanged += new System.EventHandler(this.EtuValikkoVastaus_SelectedIndexChanged);
+            this.EtuValikkoVastaus.SelectionChangeCommitted += new System.EventHandler(this.EtuValikkoVastaus_Vaihto);
             // 
             // Valikko
             // 
