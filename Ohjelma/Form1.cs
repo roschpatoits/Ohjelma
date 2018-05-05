@@ -196,9 +196,10 @@ namespace Ohjelma
         }
 
 
-        private void EtuValikko_SelectedIndexChanged(object sender, EventArgs e)
+   /*     private void EtuValikko_SelectedIndexChanged(object sender, EventArgs e)
         {
-   /*         int Peta = 15;
+       
+            int Peta = 15;
             int Tera = 12;
             int Giga = 9;
             int Mega = 6;
@@ -212,9 +213,10 @@ namespace Ohjelma
             int nano = -9;
             int piko = -12;
             int femto = -15;
-    */        
+            
 
         }
+        */
 
 
         private void Valikko_SelectedIndexChanged(object sender, EventArgs e)
@@ -261,20 +263,20 @@ namespace Ohjelma
         private void Taulukoi(int[] taulukko)
         {
             int i = 0;
-            taulukko[i] = 15; i++;
-            taulukko[i] = 12; i++;
-            taulukko[i] = 9; i++;
-            taulukko[i] = 6; i++;
-            taulukko[i] = 3; i++;
-            taulukko[i] = 2; i++;
-            taulukko[i] = 1; i++;
-            taulukko[i] = -1; i++;
-            taulukko[i] = -2; i++;
-            taulukko[i] = -3; i++;
-            taulukko[i] = -6; i++;
-            taulukko[i] = -9; i++;
-            taulukko[i] = -12; i++;
-            taulukko[i] = -15;
+            taulukko[i] = 15; i++;              /// Peta
+            taulukko[i] = 12; i++;              /// Tera
+            taulukko[i] = 9; i++;               /// Giga
+            taulukko[i] = 6; i++;               /// Mega
+            taulukko[i] = 3; i++;               /// Kilo
+            taulukko[i] = 2; i++;               /// Hehto
+            taulukko[i] = 1; i++;               /// Deka
+            taulukko[i] = -1; i++;              /// Desi
+            taulukko[i] = -2; i++;              /// Sentti
+            taulukko[i] = -3; i++;              /// Milli
+            taulukko[i] = -6; i++;              /// Mikro
+            taulukko[i] = -9; i++;              /// Nano
+            taulukko[i] = -12; i++;             /// Piko
+            taulukko[i] = -15;                  /// Femto
             return;
         }
 
@@ -286,16 +288,16 @@ namespace Ohjelma
             merkit[i] = "Tera"; i++;
             merkit[i] = "Giga"; i++;
             merkit[i] = "Mega"; i++;
-            merkit[i] = "kilo"; i++;
-            merkit[i] = "hehto"; i++;
-            merkit[i] = "deka"; i++;
-            merkit[i] = "desi"; i++;
-            merkit[i] = "sentti"; i++;
-            merkit[i] = "milli"; i++;
-            merkit[i] = "mikro"; i++;
-            merkit[i] = "nano"; i++;
-            merkit[i] = "piko"; i++;
-            merkit[i] = "femto";
+            merkit[i] = "Kilo"; i++;
+            merkit[i] = "Hehto"; i++;
+            merkit[i] = "Deka"; i++;
+            merkit[i] = "Desi"; i++;
+            merkit[i] = "Sentti"; i++;
+            merkit[i] = "Milli"; i++;
+            merkit[i] = "Mikro"; i++;
+            merkit[i] = "Nano"; i++;
+            merkit[i] = "Piko"; i++;
+            merkit[i] = "Femto";
             return;
         }
 

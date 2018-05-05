@@ -338,21 +338,20 @@
             "Giga",
             "Mega",
             "Kilo",
-            "hehto",
-            "deka",
-            "desi",
-            "sentti",
-            "milli",
-            "mikro",
-            "nano",
-            "piko",
-            "femto"});
+            "Hehto",
+            "Deka",
+            "Desi",
+            "Sentti",
+            "Milli",
+            "Mikro",
+            "Nano",
+            "Piko",
+            "Femto"});
             this.EtuValikkoVastaus.Location = new System.Drawing.Point(209, 285);
             this.EtuValikkoVastaus.Name = "EtuValikkoVastaus";
             this.EtuValikkoVastaus.Size = new System.Drawing.Size(71, 21);
             this.EtuValikkoVastaus.TabIndex = 22;
             this.EtuValikkoVastaus.Tag = "EtuValikkoVastaus";
-      //      this.EtuValikkoVastaus.SelectedIndexChanged += new System.EventHandler(this.EtuValikkoVastaus_SelectedIndexChanged);
             this.EtuValikkoVastaus.SelectionChangeCommitted += new System.EventHandler(this.EtuValikkoVastaus_Vaihto);
             // 
             // Valikko
@@ -396,7 +395,6 @@
             this.EtuValikko.Size = new System.Drawing.Size(67, 21);
             this.EtuValikko.TabIndex = 20;
             this.EtuValikko.Tag = "EtuValikko";
-            this.EtuValikko.SelectedIndexChanged += new System.EventHandler(this.EtuValikko_SelectedIndexChanged);
             // 
             // label7
             // 
