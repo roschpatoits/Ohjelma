@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.Pelisivu = new System.Windows.Forms.TabPage();
+            this.Nappulasivu = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -71,34 +71,45 @@
             this.label1 = new System.Windows.Forms.Label();
             this.LaatikkoC = new System.Windows.Forms.TextBox();
             this.LaatikkoF = new System.Windows.Forms.TextBox();
+            this.Kontrasti = new System.Windows.Forms.TabPage();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
-            this.Pelisivu.SuspendLayout();
+            this.Nappulasivu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.Muunnoksia.SuspendLayout();
+            this.Kontrasti.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.Pelisivu);
+            this.tabControl1.Controls.Add(this.Nappulasivu);
             this.tabControl1.Controls.Add(this.Muunnoksia);
+            this.tabControl1.Controls.Add(this.Kontrasti);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(464, 478);
             this.tabControl1.TabIndex = 0;
             // 
-            // Pelisivu
+            // Nappulasivu
             // 
-            this.Pelisivu.Controls.Add(this.splitContainer1);
-            this.Pelisivu.Location = new System.Drawing.Point(4, 22);
-            this.Pelisivu.Name = "Pelisivu";
-            this.Pelisivu.Size = new System.Drawing.Size(456, 452);
-            this.Pelisivu.TabIndex = 4;
-            this.Pelisivu.Text = "Pelisivu";
-            this.Pelisivu.UseVisualStyleBackColor = true;
+            this.Nappulasivu.Controls.Add(this.splitContainer1);
+            this.Nappulasivu.Location = new System.Drawing.Point(4, 22);
+            this.Nappulasivu.Name = "Nappulasivu";
+            this.Nappulasivu.Size = new System.Drawing.Size(456, 452);
+            this.Nappulasivu.TabIndex = 4;
+            this.Nappulasivu.Text = "Nappulasivu";
+            this.Nappulasivu.UseVisualStyleBackColor = true;
             // 
             // splitContainer1
             // 
@@ -565,6 +576,50 @@
             this.LaatikkoF.Tag = "LaatikkoF";
             this.LaatikkoF.TextChanged += new System.EventHandler(this.LaatikkoF_TextChanged);
             // 
+            // Kontrasti
+            // 
+            this.Kontrasti.Controls.Add(this.pictureBox2);
+            this.Kontrasti.Controls.Add(this.pictureBox4);
+            this.Kontrasti.Controls.Add(this.pictureBox1);
+            this.Kontrasti.Controls.Add(this.trackBar1);
+            this.Kontrasti.Location = new System.Drawing.Point(4, 22);
+            this.Kontrasti.Name = "Kontrasti";
+            this.Kontrasti.Size = new System.Drawing.Size(456, 452);
+            this.Kontrasti.TabIndex = 5;
+            this.Kontrasti.Text = "Kontrasti";
+            this.Kontrasti.UseVisualStyleBackColor = true;
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(115, 269);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(215, 45);
+            this.trackBar1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(8, 52);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(116, 134);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(172, 52);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(116, 134);
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(332, 52);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(116, 134);
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -579,13 +634,19 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SuperSiistiOhjelma2000";
             this.tabControl1.ResumeLayout(false);
-            this.Pelisivu.ResumeLayout(false);
+            this.Nappulasivu.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.Muunnoksia.ResumeLayout(false);
             this.Muunnoksia.PerformLayout();
+            this.Kontrasti.ResumeLayout(false);
+            this.Kontrasti.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -594,7 +655,7 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage Muunnoksia;
-        private System.Windows.Forms.TabPage Pelisivu;
+        private System.Windows.Forms.TabPage Nappulasivu;
         private System.Windows.Forms.TextBox LaatikkoF;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button button6;
@@ -634,6 +695,11 @@
         private System.Windows.Forms.ComboBox EtuValikkoVastaus;
         private System.Windows.Forms.ComboBox Valikko;
         private System.Windows.Forms.ComboBox EtuValikko;
+        private System.Windows.Forms.TabPage Kontrasti;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TrackBar trackBar1;
     }
 }
 
