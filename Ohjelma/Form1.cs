@@ -164,19 +164,26 @@ namespace Ohjelma
 
         private void LaatikkoF_TextChanged(object sender, EventArgs e)
         {
+            double F = 0.0;
+            try{
+                F = double.Parse(LaatikkoF.Text);
 
-            double F = double.Parse(LaatikkoF.Text);
-            double C = (F - 32) / 1.8;
-            if (F != null)
+                double C = (F - 32) / 1.8;
+                if (F != null)
+                {
+                    LaatikkoC.Text = Math.Round(C, 2) + "";
+                }
+                else C.Equals(null);
+                if (C < -273)
+                {
+                    LaatikkoVirheF.Text = "Arvo alittaa absoluuttisen nollapisteen";
+                }
+                else LaatikkoVirheF.Text = "";
+            } catch (FormatException)
             {
-                LaatikkoC.Text = Math.Round(C, 2) + "";
+                LaatikkoVirheF.Text = "Anna kunnollinen arvo";
             }
-            else C.Equals(null);
-            if (C < -273)
-            {
-                LaatikkoVirheF.Text = "Arvo alittaa absoluuttisen nollapisteen";
-            }
-            else LaatikkoVirheF.Text = "";
+
         }
 
 

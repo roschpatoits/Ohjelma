@@ -319,7 +319,7 @@
             this.Muunnos.ReadOnly = true;
             this.Muunnos.Size = new System.Drawing.Size(139, 20);
             this.Muunnos.TabIndex = 25;
-            this.Muunnos.TextChanged += new System.EventHandler(this.Muunnos_TextChanged);
+    //        this.Muunnos.TextChanged += new System.EventHandler(this.Muunnos_TextChanged);
             // 
             // textBox2
             // 
