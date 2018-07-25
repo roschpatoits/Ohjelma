@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.Pelisivu = new System.Windows.Forms.TabPage();
+            this.Nappulasivu = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -48,7 +49,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.Muunnos = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Laatikko = new System.Windows.Forms.TextBox();
             this.EtuValikkoVastaus = new System.Windows.Forms.ComboBox();
             this.Valikko = new System.Windows.Forms.ComboBox();
             this.EtuValikko = new System.Windows.Forms.ComboBox();
@@ -70,34 +71,45 @@
             this.label1 = new System.Windows.Forms.Label();
             this.LaatikkoC = new System.Windows.Forms.TextBox();
             this.LaatikkoF = new System.Windows.Forms.TextBox();
+            this.Kontrasti = new System.Windows.Forms.TabPage();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
-            this.Pelisivu.SuspendLayout();
+            this.Nappulasivu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.Muunnoksia.SuspendLayout();
+            this.Kontrasti.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.Pelisivu);
+            this.tabControl1.Controls.Add(this.Nappulasivu);
             this.tabControl1.Controls.Add(this.Muunnoksia);
+            this.tabControl1.Controls.Add(this.Kontrasti);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(464, 478);
             this.tabControl1.TabIndex = 0;
             // 
-            // Pelisivu
+            // Nappulasivu
             // 
-            this.Pelisivu.Controls.Add(this.splitContainer1);
-            this.Pelisivu.Location = new System.Drawing.Point(4, 22);
-            this.Pelisivu.Name = "Pelisivu";
-            this.Pelisivu.Size = new System.Drawing.Size(456, 452);
-            this.Pelisivu.TabIndex = 4;
-            this.Pelisivu.Text = "Pelisivu";
-            this.Pelisivu.UseVisualStyleBackColor = true;
+            this.Nappulasivu.Controls.Add(this.splitContainer1);
+            this.Nappulasivu.Location = new System.Drawing.Point(4, 22);
+            this.Nappulasivu.Name = "Nappulasivu";
+            this.Nappulasivu.Size = new System.Drawing.Size(456, 452);
+            this.Nappulasivu.TabIndex = 4;
+            this.Nappulasivu.Text = "Nappulasivu";
+            this.Nappulasivu.UseVisualStyleBackColor = true;
             // 
             // splitContainer1
             // 
@@ -253,7 +265,7 @@
             this.Muunnoksia.Controls.Add(this.textBox4);
             this.Muunnoksia.Controls.Add(this.label10);
             this.Muunnoksia.Controls.Add(this.Muunnos);
-            this.Muunnoksia.Controls.Add(this.textBox2);
+            this.Muunnoksia.Controls.Add(this.Laatikko);
             this.Muunnoksia.Controls.Add(this.EtuValikkoVastaus);
             this.Muunnoksia.Controls.Add(this.Valikko);
             this.Muunnoksia.Controls.Add(this.EtuValikko);
@@ -319,43 +331,44 @@
             this.Muunnos.ReadOnly = true;
             this.Muunnos.Size = new System.Drawing.Size(139, 20);
             this.Muunnos.TabIndex = 25;
-    //        this.Muunnos.TextChanged += new System.EventHandler(this.Muunnos_TextChanged);
             // 
-            // textBox2
+            // Laatikko
             // 
-            this.textBox2.Location = new System.Drawing.Point(16, 313);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 20);
-            this.textBox2.TabIndex = 24;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.Laatikko.Location = new System.Drawing.Point(16, 313);
+            this.Laatikko.Name = "Laatikko";
+            this.Laatikko.Size = new System.Drawing.Size(136, 20);
+            this.Laatikko.TabIndex = 24;
+            this.Laatikko.TextChanged += new System.EventHandler(this.Laatikko_TextChanged);
             // 
             // EtuValikkoVastaus
             // 
             this.EtuValikkoVastaus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.EtuValikkoVastaus.FormattingEnabled = true;
             this.EtuValikkoVastaus.Items.AddRange(new object[] {
-            "Peta P",
-            "Tera T",
-            "Giga G",
-            "Mega M",
-            "Kilo k",
-            "hehto h",
-            "deka da",
-            "desi d",
-            "sentti c",
-            "milli m",
-            "mikro μ",
-            "nano n",
-            "piko p",
-            "femto f"});
+            "Peta",
+            "Tera",
+            "Giga",
+            "Mega",
+            "Kilo",
+            "Hehto",
+            "Deka",
+            "Desi",
+            "Sentti",
+            "Milli",
+            "Mikro",
+            "Nano",
+            "Piko",
+            "Femto"});
             this.EtuValikkoVastaus.Location = new System.Drawing.Point(209, 285);
             this.EtuValikkoVastaus.Name = "EtuValikkoVastaus";
             this.EtuValikkoVastaus.Size = new System.Drawing.Size(71, 21);
             this.EtuValikkoVastaus.TabIndex = 22;
             this.EtuValikkoVastaus.Tag = "EtuValikkoVastaus";
+            this.EtuValikkoVastaus.SelectionChangeCommitted += new System.EventHandler(this.EtuValikkoVastaus_Vaihto);
             // 
             // Valikko
             // 
+            this.Valikko.DisplayMember = "Metri";
             this.Valikko.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Valikko.FormattingEnabled = true;
             this.Valikko.Items.AddRange(new object[] {
@@ -371,29 +384,29 @@
             // EtuValikko
             // 
             this.EtuValikko.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.EtuValikko.Enabled = false;
             this.EtuValikko.FormattingEnabled = true;
             this.EtuValikko.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.EtuValikko.Items.AddRange(new object[] {
             "Peta",
-            "Tera T",
-            "Giga G",
-            "Mega M",
-            "Kilo k",
-            "hehto h",
-            "deka da",
-            "desi d",
-            "sentti c",
-            "milli m",
-            "mikro μ",
-            "nano n",
-            "piko p",
-            "femto f"});
+            "Tera",
+            "Giga",
+            "Mega",
+            "Kilo",
+            "hehto",
+            "deka",
+            "desi",
+            "sentti",
+            "milli",
+            "mikro",
+            "nano",
+            "piko",
+            "femto"});
             this.EtuValikko.Location = new System.Drawing.Point(16, 285);
             this.EtuValikko.Name = "EtuValikko";
             this.EtuValikko.Size = new System.Drawing.Size(67, 21);
             this.EtuValikko.TabIndex = 20;
             this.EtuValikko.Tag = "EtuValikko";
-            this.EtuValikko.SelectedIndexChanged += new System.EventHandler(this.EtuValikko_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -437,6 +450,7 @@
             this.LaatikkoM2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.LaatikkoM2.Location = new System.Drawing.Point(180, 205);
             this.LaatikkoM2.Name = "LaatikkoM2";
+            this.LaatikkoM2.ReadOnly = true;
             this.LaatikkoM2.Size = new System.Drawing.Size(100, 20);
             this.LaatikkoM2.TabIndex = 15;
             this.LaatikkoM2.Tag = "LaatikkoM2";
@@ -492,6 +506,7 @@
             this.LaatikkoMM.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.LaatikkoMM.Location = new System.Drawing.Point(180, 116);
             this.LaatikkoMM.Name = "LaatikkoMM";
+            this.LaatikkoMM.ReadOnly = true;
             this.LaatikkoMM.Size = new System.Drawing.Size(100, 20);
             this.LaatikkoMM.TabIndex = 8;
             this.LaatikkoMM.Tag = "LaatikkoMM";
@@ -561,6 +576,50 @@
             this.LaatikkoF.Tag = "LaatikkoF";
             this.LaatikkoF.TextChanged += new System.EventHandler(this.LaatikkoF_TextChanged);
             // 
+            // Kontrasti
+            // 
+            this.Kontrasti.Controls.Add(this.pictureBox2);
+            this.Kontrasti.Controls.Add(this.pictureBox4);
+            this.Kontrasti.Controls.Add(this.pictureBox1);
+            this.Kontrasti.Controls.Add(this.trackBar1);
+            this.Kontrasti.Location = new System.Drawing.Point(4, 22);
+            this.Kontrasti.Name = "Kontrasti";
+            this.Kontrasti.Size = new System.Drawing.Size(456, 452);
+            this.Kontrasti.TabIndex = 5;
+            this.Kontrasti.Text = "Kontrasti";
+            this.Kontrasti.UseVisualStyleBackColor = true;
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(115, 269);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(215, 45);
+            this.trackBar1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(8, 52);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(116, 134);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(172, 52);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(116, 134);
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(332, 52);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(116, 134);
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -568,20 +627,26 @@
             this.ClientSize = new System.Drawing.Size(464, 477);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SuperSiistiOhjelma2000";
             this.tabControl1.ResumeLayout(false);
-            this.Pelisivu.ResumeLayout(false);
+            this.Nappulasivu.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.Muunnoksia.ResumeLayout(false);
             this.Muunnoksia.PerformLayout();
+            this.Kontrasti.ResumeLayout(false);
+            this.Kontrasti.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -590,7 +655,7 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage Muunnoksia;
-        private System.Windows.Forms.TabPage Pelisivu;
+        private System.Windows.Forms.TabPage Nappulasivu;
         private System.Windows.Forms.TextBox LaatikkoF;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button button6;
@@ -626,10 +691,15 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox Muunnos;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Laatikko;
         private System.Windows.Forms.ComboBox EtuValikkoVastaus;
         private System.Windows.Forms.ComboBox Valikko;
         private System.Windows.Forms.ComboBox EtuValikko;
+        private System.Windows.Forms.TabPage Kontrasti;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TrackBar trackBar1;
     }
 }
 
